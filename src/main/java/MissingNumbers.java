@@ -33,20 +33,20 @@ public class MissingNumbers {
         String[] input2 = s.nextLine().split("\\s");
 
 
-        int[] yo = new int[10000101];
-        Arrays.fill(yo, 100000000);
-        for (int i = 0; i < l1; i++){
+        int[] yo = new int[10000101]; // Initializing the array to a high size, as per the requrements
+        Arrays.fill(yo, 100000000); // Set the value of the array, something eithr too high or too low
+        for (int i = 0; i < l1; i++){ // Iterate over first input array
             if (yo[Integer.parseInt(input1[i])] == 100000000) {
                 yo[Integer.parseInt(input1[i])] = 0;
             }
-            yo[Integer.parseInt(input1[i])] = yo[Integer.parseInt(input1[i])] + 1;
+            yo[Integer.parseInt(input1[i])] = yo[Integer.parseInt(input1[i])] + 1; // Add +1
         }
 
-        for (int i = 0; i < l2; i++){
+        for (int i = 0; i < l2; i++){ // Iterate over second input array
             if (yo[Integer.parseInt(input2[i])] == 100000000) {
                 yo[Integer.parseInt(input2[i])] = 0;
             }
-            yo[Integer.parseInt(input2[i])] = yo[Integer.parseInt(input2[i])] - 1;
+            yo[Integer.parseInt(input2[i])] = yo[Integer.parseInt(input2[i])] - 1; // Add -1
         }
 
         for (int i = 0; i< yo.length; i++) {
